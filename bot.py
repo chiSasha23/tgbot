@@ -69,7 +69,7 @@ async def start(message: types.Message):
         await bot.send_message(chat_id, welcome_text)
         # Первый урок: ссылки на видео + презентация
         for link in lessons[0]["video_url"]:
-            await bot.send_message(chat_id, f"Смотреть видео: {link}")
+            await bot.send_message(chat_id, f"Новий день курсу💕: {link}")
         with open(lessons[0]['presentation'], "rb") as pres:
             await bot.send_document(chat_id, pres)
     else:
@@ -105,5 +105,6 @@ async def on_startup(_):
 
 if __name__ == "__main__":
     executor.start_polling(dp, skip_updates=True, on_startup=on_startup)
+
 
 
